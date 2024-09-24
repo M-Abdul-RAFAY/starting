@@ -5,12 +5,31 @@ const path = require("path");
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-app.set(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 const port = 3000;
 
-app.get("/", (req, res) => {
-  res.send("hello, world");
+let posts = [
+  {
+    username: "Rafay",
+    age: 19,
+  },
+  {
+    username: "Ashan",
+    age: 22,
+  },
+  {
+    username: "Haseed",
+    age: 18,
+  },
+  {
+    username: "Wasay",
+    age: 23,
+  },
+];
+
+app.get("/post", (req, res) => {
+  res.render("index.ejs", { posts });
 });
 
 app.listen(port, () => {

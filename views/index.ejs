@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MERN</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Qura Applicaton</h1>
+    <% for(post of posts){ %>
+    <div class="elements">
+      <p><%=post.username%></p>
+      <p><%=post.age%></p>
+    </div>
+    <%}%>
+  </body>
+</html>

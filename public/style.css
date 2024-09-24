@@ -1,0 +1,22 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  color: darkred;
+  font-size: 2.5rem;
+}
+.elements {
+  border: solid 2px black;
+  margin: 1%;
+  border-radius: 10px;
+  text-align: center;
+  width: 20%;
+  background-color: antiquewhite;
+  margin-left: 40%;
+}
+.elements p {
+  font-size: 1.3rem;
+}
