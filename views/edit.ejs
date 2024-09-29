@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form of Qura</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>This is the Edit form</h1>
+    <h4>You can only update your age</h4>
+    <h3>ID: <%=post.id%></h3>
+    <h3>Name: <%=post.username%></h3>
+    <h1>Current Age: <%=post.age%></h1>
+    <form method="POST" action="/post/<%= post.id%>?_method=PATCH">
+      <label for="user-age">Age:</label>
+      <input
+        type="number"
+        name="age"
+        id="user-age"
+        placeholder="Please Enter Your Age"
+      />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

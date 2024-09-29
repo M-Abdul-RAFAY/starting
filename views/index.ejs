@@ -12,7 +12,13 @@
     <div class="elements">
       <p><%=post.username%></p>
       <p><%=post.age%></p>
+      <a class="detail-btn" href="./post/<%=post.id%>">View Detail</a>
+      <a class="detail-btn" href="./post/<%=post.id%>/edit">Edit</a>
+      <form method="post" action="/post/<%= post.id%>?_method=DELETE">
+        <button class="del-btn">Delete</button>
+      </form>
     </div>
     <%}%>
+    <a href="./post/new">Fill Your Details</a>
   </body>
 </html>
